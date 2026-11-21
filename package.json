@@ -1,0 +1,12 @@
+{
+  "name": "proyecto-galeno",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Prototipo funcional local del sistema de agendamiento de horas médicas Proyecto Galeno",
+  "type": "module",
+  "engines": {"node": ">=22.13.0"},
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --test tests/*.test.mjs"
+  }
+}

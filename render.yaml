@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: proyecto-galeno-demo
+    runtime: node
+    plan: free
+    buildCommand: echo "Proyecto sin dependencias externas"
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.1
+      - key: NODE_ENV
+        value: production
+      - key: GALENO_DB_FILE
+        value: /tmp/galeno.sqlite
+      - key: GALENO_SECRET
+        generateValue: true
+      - key: GALENO_DEMO_USER
+        value: galeno
+      - key: GALENO_DEMO_PASSWORD
+        sync: false
